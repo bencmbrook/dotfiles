@@ -80,7 +80,6 @@ export ZSH="$HOME/.oh-my-zsh"
 
 # package.json scripts autocomplete
 plugins=(
-  zsh-autosuggestions
   yarn
 )
 
@@ -122,10 +121,10 @@ export GITHUB_EMAIL=ben@transcend.io
 # Transend bash profile
 source /Users/benbrook/transcend/main/.bash_profile
 
-# Node Version Manager (https://github.com/nvm-sh/nvm)
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+# # Node Version Manager (https://github.com/nvm-sh/nvm)
+# export NVM_DIR="$HOME/.nvm"
+# [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+# [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 # For GPG signatures (https://stackoverflow.com/a/42265848)
 export GPG_TTY=$(tty)
