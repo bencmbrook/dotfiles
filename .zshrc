@@ -2,6 +2,9 @@
 # OH MY ZSH #
 #############
 
+# Get ZSH startup time by calling `zprof`
+zmodload zsh/zprof
+
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
