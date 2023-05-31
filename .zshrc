@@ -45,10 +45,13 @@ mkcdir ()
 # Aliases
 alias code='open -b com.microsoft.VSCode "$@"'
 alias codes='cd $HOME/Code.noindex'
+alias pgpt='cd $HOME/Code.noindex/privacy-gpt'
 alias website='cd $HOME/transcend/website'
-alias gmail='cd ~/.gmailctl && code .'
 alias docs='cd $HOME/transcend/website-2.0'
+alias gmail='cd ~/.gmailctl && code .'
 alias tailscale="/Applications/Tailscale.app/Contents/MacOS/Tailscale"
+# Useful for developing this
+alias sz='source ~/.zshrc'
 
 # Add `pulumi` to the PATH (https://superuser.com/questions/284342/what-are-path-and-other-environment-variables-and-how-can-i-set-or-use-them)
 export PATH=$PATH:$HOME/.pulumi/bin
