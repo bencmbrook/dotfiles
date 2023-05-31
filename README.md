@@ -19,6 +19,8 @@ Clone this repo into `~/Code.noindex` and change the content of `~/.zshrc` to po
 source ~/Code.noindex/zshrc/.zshrc
 ```
 
+_If using a different folder, change `ZSHRC_FOLDER` in [`.zshrc`](./.zshrc)._
+
 ### `starship.toml`
 
 [`.zshrc`](./.zshrc) already points to `~/Code.noindex/zshrc/starship.toml` so this should work out of the box.

@@ -1,11 +1,11 @@
 # Get ZSH startup time by calling `zprof`
 zmodload zsh/zprof
 
-# # Path to your oh-my-zsh installation.
-# export ZSH="$HOME/.oh-my-zsh"
+# This repo's folder
+ZSHRC_FOLDER="$HOME/Code.noindex/zshrc"
 
 # Antigen (zsh package manager: https://github.com/zsh-users/antigen)
-source ./antigen.zsh
+source "$ZSHRC_FOLDER/antigen.zsh"
 
 # oh-my-zsh
 antigen use oh-my-zsh
@@ -51,5 +51,5 @@ alias tailscale="/Applications/Tailscale.app/Contents/MacOS/Tailscale"
 export PATH=$PATH:$HOME/.pulumi/bin
 
 # Starship theme
-export STARSHIP_CONFIG=~/Code.noindex/zshrc/starship.toml
+export STARSHIP_CONFIG="$ZSHRC_FOLDER/starship.toml"
 eval "$(starship init zsh)"
