@@ -15,6 +15,9 @@ antigen use oh-my-zsh
 ###################
 # Yarn scripts autocomplete
 antigen bundle yarn
+
+# NVM with lazy loading (it's slow to start terminal)
+export NVM_LAZY_LOAD=true
 antigen bundle lukechilds/zsh-nvm
 
 # Apply antigen
