@@ -6,7 +6,10 @@
 
 - zsh shell (comes stock on Mac)
 - Install [starship.rs](https://starship.rs/)
-- Install [oh-my-zsh](https://github.com/ohmyzsh/ohmyzsh)
+
+### Updating
+
+- Update [antigen](https://github.com/zsh-users/antigen) by rerunning install script and overwriting this [antigen.zsh](./antigen.zsh)
 
 ### `.zshrc`:
 

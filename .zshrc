@@ -1,31 +1,31 @@
-#############
-# OH MY ZSH #
-#############
-
 # Get ZSH startup time by calling `zprof`
 zmodload zsh/zprof
 
-# Path to your oh-my-zsh installation.
-export ZSH="$HOME/.oh-my-zsh"
+# # Path to your oh-my-zsh installation.
+# export ZSH="$HOME/.oh-my-zsh"
 
-# package.json scripts autocomplete
-plugins=(
-  yarn
-)
+# Antigen (zsh package manager: https://github.com/zsh-users/antigen)
+source ./antigen.zsh
 
-source $ZSH/oh-my-zsh.sh
+# oh-my-zsh
+antigen use oh-my-zsh
 
-# User configuration
+###################
+# ANTIGEN PLUGINS #
+###################
+# Yarn scripts autocomplete
+antigen bundle yarn
+antigen bundle lukechilds/zsh-nvm
+
+# Apply antigen
+antigen apply
+
+# GitHub configuration for Transcend bash profile
 export GITHUB_USERNAME=bencmbrook
 export GITHUB_EMAIL=ben@transcend.io
 
 # Transend bash profile
 source /Users/benbrook/transcend/main/.bash_profile
-
-# Node Version Manager (https://github.com/nvm-sh/nvm)
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 # For GPG signatures (https://stackoverflow.com/a/42265848)
 export GPG_TTY=$(tty)
@@ -45,18 +45,10 @@ alias codes='cd $HOME/Code.noindex'
 alias website='cd $HOME/transcend/website'
 alias gmail='cd ~/.gmailctl && code .'
 alias docs='cd $HOME/transcend/website-2.0'
-
-# add Pulumi to the PATH
-export PATH=$PATH:$HOME/.pulumi/bin
-
-# Tailscale
 alias tailscale="/Applications/Tailscale.app/Contents/MacOS/Tailscale"
 
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/benbrook/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/benbrook/Downloads/google-cloud-sdk/path.zsh.inc'; fi
-
-# The next line enables shell command completion for gcloud.
-if [ -f '/Users/benbrook/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/benbrook/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
+# Add `pulumi` to the PATH (https://superuser.com/questions/284342/what-are-path-and-other-environment-variables-and-how-can-i-set-or-use-them)
+export PATH=$PATH:$HOME/.pulumi/bin
 
 # Starship theme
 export STARSHIP_CONFIG=~/Code.noindex/zshrc/starship.toml
