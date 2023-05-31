@@ -39,14 +39,14 @@ _If using a different folder, change `ZSHRC_FOLDER` in [`.zshrc`](./.zshrc)._
 
 ## Startup time profiling
 
-get startup time
+Get startup time:
 
 ```
-/usr/bin/time /bin/zsh -i -c exit
+bash timing/time.sh
 ```
 
-profile startup time
+Profile startup time:
 
 ```
-zprof > zshtiming.txt
+bash timing/profile.sh
 ```
