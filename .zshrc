@@ -77,8 +77,8 @@ export ZSH="$HOME/.oh-my-zsh"
 
 # package.json scripts autocomplete
 plugins=(
-  zsh-npm-scripts-autocomplete
-  yarn-extra-completion
+  zsh-autosuggestions
+  yarn
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -113,16 +113,13 @@ source $ZSH/oh-my-zsh.sh
 # CUSTOM #
 ##########
 
-if [ "" != "" ]
-then
-  source "/Users/benbrook/zsh-git-prompt/zshrc.sh"
-  PROMPT='%B%m%~%b$(git_super_status) %# '
-fi
 
 export GITHUB_USERNAME=bencmbrook
 export GITHUB_EMAIL=ben@transcend.io
+# Transend bash profile
 source /Users/benbrook/transcend/main/.bash_profile
 
+# Node Version Manager (https://github.com/nvm-sh/nvm)
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
@@ -158,6 +155,6 @@ if [ -f '/Users/benbrook/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . '/Us
 if [ -f '/Users/benbrook/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/benbrook/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+# [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 eval "$(starship init zsh)"
