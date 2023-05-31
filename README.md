@@ -9,3 +9,17 @@
 ~/.config/starship.toml
 
 - https://starship.rs/
+
+## Startup timing
+
+get startup time
+
+```
+/usr/bin/time /bin/zsh -i -c exit
+```
+
+profile startup time
+
+```
+zprof > zshtiming.txt
+```
