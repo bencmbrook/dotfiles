@@ -48,7 +48,7 @@ alias pgpt='cd $HOME/Code.noindex/privacy-gpt'
 alias website='cd $HOME/transcend/website'
 alias docs='cd $HOME/transcend/website-2.0'
 alias gmail='cd ~/.gmailctl && code .'
-alias tailscale="/Applications/Tailscale.app/Contents/MacOS/Tailscale"
+
 # Useful for developing this
 alias sz='source ~/.zshrc'
 

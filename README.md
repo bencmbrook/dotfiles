@@ -42,11 +42,11 @@ _If using a different folder, change `ZSHRC_FOLDER` in [`.zshrc`](./.zshrc)._
 Get startup time:
 
 ```
-bash timing/time.sh
+/usr/bin/time /bin/zsh -i -c exit
 ```
 
 Profile startup time:
 
 ```
-bash timing/profile.sh
+zprof
 ```
