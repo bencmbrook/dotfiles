@@ -5,7 +5,8 @@
 ### Requirements
 
 - zsh shell (comes stock on Mac)
-- Install [starship.rs](https://starship.rs/)
+- Install [starship.rs](https://starship.rs/) with homebrew
+  - Install homebrew first
 
 ### Updating
 
