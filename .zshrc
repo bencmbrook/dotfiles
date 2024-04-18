@@ -27,7 +27,7 @@ export GITHUB_USERNAME=bencmbrook
 export GITHUB_EMAIL=ben@transcend.io
 
 # Transend bash profile
-# source /Users/benbrook/transcend/main/.bash_profile
+source /Users/benbrook/transcend/main/.bash_profile
 
 # For GPG signatures (https://stackoverflow.com/a/42265848)
 export GPG_TTY=$(tty)
@@ -45,8 +45,7 @@ mkcdir ()
 alias code='open -b com.microsoft.VSCode "$@"'
 alias codes='cd $HOME/Code.noindex'
 alias pgpt='cd $HOME/Code.noindex/privacy-gpt'
-alias website='cd $HOME/transcend/website'
-alias docs='cd $HOME/transcend/website-2.0'
+alias docs='cd $HOME/transcend/docs'
 alias gmail='cd ~/.gmailctl && code .'
 
 # Useful for developing this
