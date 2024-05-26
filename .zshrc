@@ -44,7 +44,9 @@ mkcdir ()
 # Aliases
 alias code='open -b com.microsoft.VSCode "$@"'
 alias codes='cd $HOME/Code.noindex'
-alias pgpt='cd $HOME/Code.noindex/privacy-gpt'
+alias zshrc='cd $HOME/Code.noindex/zshrc'
+alias pgpt='cd $HOME/transcend/privacy-gpt'
+alias site='cd $HOME/transcend/website-2024'
 alias docs='cd $HOME/transcend/docs'
 alias gmail='cd ~/.gmailctl && code .'
 
