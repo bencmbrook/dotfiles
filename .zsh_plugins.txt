@@ -1,5 +1,8 @@
 # .zsh_plugins.txt - see https://antidote.sh/usage
 
+# Run before anything that calls compdef
+mattmc3/ez-compinit
+
 # Basic Zsh plugins are defined in user/repo format
 lukechilds/zsh-nvm
 zsh-users/zsh-syntax-highlighting
