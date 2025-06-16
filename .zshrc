@@ -4,23 +4,15 @@ zmodload zsh/zprof
 # This repo's folder
 ZSHRC_FOLDER="$HOME/Code.noindex/zshrc"
 
-# Antigen (zsh package manager: https://github.com/zsh-users/antigen)
-source "$ZSHRC_FOLDER/antigen.zsh"
+# Antidote (zsh package manager: https://antidote.sh/install)
+source /opt/homebrew/opt/antidote/share/antidote/antidote.zsh
 
-# oh-my-zsh
-antigen use oh-my-zsh
+# Configure antidote to load plugins from ./.zsh_plugins.txt and ~/.zsh_plugins.zsh
+zstyle ':antidote:bundle' file "$ZSHRC_FOLDER/.zsh_plugins.txt"
+zstyle ':antidote:static' file "${ZDOTDIR:-$HOME}/.zsh_plugins.zsh"
 
-###################
-# ANTIGEN PLUGINS #
-###################
-
-antigen bundle yarn
-antigen bundle lukechilds/zsh-nvm
-antigen bundle zsh-users/zsh-syntax-highlighting
-antigen bundle zsh-users/zsh-autosuggestions
-
-# Apply antigen
-antigen apply
+# Load antidote plugins from .zsh_plugins.txt
+antidote load
 
 # GitHub configuration for Transcend bash profile
 export GITHUB_USERNAME=bencmbrook
@@ -82,5 +74,3 @@ load-nvmrc() {
 add-zsh-hook chpwd load-nvmrc
 load-nvmrc
 
-# pnpm autocomplete, installed via `pnpm install-completion zsh`
-[[ -f ~/.config/tabtab/zsh/__tabtab.zsh ]] && . ~/.config/tabtab/zsh/__tabtab.zsh || true

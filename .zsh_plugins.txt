@@ -1,0 +1,6 @@
+# .zsh_plugins.txt - see https://antidote.sh/usage
+
+# Basic Zsh plugins are defined in user/repo format
+lukechilds/zsh-nvm
+zsh-users/zsh-syntax-highlighting
+zsh-users/zsh-autosuggestions

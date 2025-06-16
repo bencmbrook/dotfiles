@@ -5,8 +5,9 @@
 ### Requirements
 
 - zsh shell (comes stock on Mac)
-- Install [starship.rs](https://starship.rs/) with homebrew
-  - Install homebrew first
+- Install homebrew first
+  - Install [starship.rs](https://starship.rs/) with homebrew
+  - Install [antidote](https://antidote.sh/install) with homebrew
 
 ### Updating
 
