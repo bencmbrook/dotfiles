@@ -49,6 +49,9 @@ alias site='cd $HOME/transcend/marketing-monorepo'
 alias docs='cd $HOME/transcend/docs'
 alias gmail='cd ~/.gmailctl && code .'
 
+# Override vscode with cursor
+alias code='cursor'
+
 # Useful for developing this
 alias sz='source ~/.zshrc'
 

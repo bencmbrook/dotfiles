@@ -123,7 +123,8 @@ format = "[$duration]($style) "
 style = "yellow"
 
 [python]
-format = "[$virtualenv]($style) "
+version_format = '${major}'
+format = "$symbol($version)[$virtualenv]($style) "
 style = "bright-black"
 
 [nodejs]
