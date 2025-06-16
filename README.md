@@ -9,10 +9,6 @@
   - Install [starship.rs](https://starship.rs/) with homebrew
   - Install [antidote](https://antidote.sh/install) with homebrew
 
-### Updating
-
-- Update [antigen](https://github.com/zsh-users/antigen) by rerunning install script and overwriting this [antigen.zsh](./antigen.zsh)
-
 ### `.zshrc`:
 
 Clone this repo into `~/Code.noindex` and change the content of `~/.zshrc` to point to this:
