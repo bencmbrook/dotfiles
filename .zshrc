@@ -18,8 +18,7 @@ antidote load
 export GITHUB_USERNAME=bencmbrook
 export GITHUB_EMAIL=ben@transcend.io
 
-# Transend bash profile
-source /Users/benbrook/transcend/main/.bash_profile
+export TRANSCEND_DIR="/Users/benbrook/transcend"
 
 # For GPG signatures (https://stackoverflow.com/a/42265848)
 export GPG_TTY=$(tty)
