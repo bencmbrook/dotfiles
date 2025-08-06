@@ -81,7 +81,6 @@ $env_var\
 $crystal\
 $custom\
 $sudo\
-$cmd_duration\
 $line_break\
 $jobs\
 $battery\
@@ -91,12 +90,17 @@ $container\
 $shell\
 $character"""
 
-right_format = "$time"
+right_format = "$cmd_duration $time"
 
 [time]
 disabled = false
 style = "bold bright-black"
 format = "[$time]($style)"
+
+[cmd_duration]
+format = "[$duration]($style) "
+show_milliseconds = true
+style = "yellow"
 
 [line_break]
 disabled = true
@@ -118,9 +122,8 @@ truncation_length	= 24
 format = '\([$state( $progress_current/$progress_total)]($style)\) '
 style = "bright-black"
 
-[cmd_duration]
-format = "[$duration]($style) "
-style = "yellow"
+[package]
+format = '[$symbol$version]($style) '
 
 [python]
 version_format = '${major}'
