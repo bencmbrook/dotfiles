@@ -1,6 +1,11 @@
 #!/bin/bash
 set -e
 
+# Install homebrew if not already installed
+if ! command -v brew &> /dev/null; then
+  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+fi
+
 # Install starship and antidote
 brew install starship
 brew install antidote
