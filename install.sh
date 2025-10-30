@@ -34,7 +34,13 @@ ZSHRC_PATH="$SCRIPT_DIR/.zshrc"
 
 # Source from ~/.zshrc (at top of file) if not already sourced
 if ! grep -q "source $ZSHRC_PATH" "${ZDOTDIR:-$HOME}/.zshrc"; then
-  echo "source $ZSHRC_PATH" | cat - "${ZDOTDIR:-$HOME}/.zshrc" > "${ZDOTDIR:-$HOME}/.zshrc.tmp" && mv "${ZDOTDIR:-$HOME}/.zshrc.tmp" "${ZDOTDIR:-$HOME}/.zshrc"
+  if [[ -z "$REMOTE_CONTAINERS" ]]; then
+    # Append in Codespaces environment to override other configs
+    echo "source $ZSHRC_PATH" >> "${ZDOTDIR:-$HOME}/.zshrc"
+  else
+    # Prepend in local environment to allow other configs to override
+    echo "source $ZSHRC_PATH" | cat - "${ZDOTDIR:-$HOME}/.zshrc" > "${ZDOTDIR:-$HOME}/.zshrc.tmp" && mv "${ZDOTDIR:-$HOME}/.zshrc.tmp" "${ZDOTDIR:-$HOME}/.zshrc"
+  fi
 fi
 
 echo "Done! ${ZDOTDIR:-$HOME}/.zshrc has been updated to source $ZSHRC_PATH"
