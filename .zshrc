@@ -4,8 +4,18 @@ zmodload zsh/zprof
 # This repo's folder
 DOTFILES_DIR="${0:A:h}"
 
+# Get the Homebrew prefix (https://github.com/Homebrew/install/blob/dfeeaedef9962e643e0190747c576ef36ac111ef/install.sh#L166-L186)
+if [[ "$(uname)" == "Linux" ]]; then
+  HOMEBREW_PREFIX="/home/linuxbrew/.linuxbrew"
+elif [[ "$(uname)" == "Darwin" ]]; then
+  HOMEBREW_PREFIX="/opt/homebrew"
+else
+  echo "Unsupported platform: $(uname)"
+  exit 1
+fi
+
 # Antidote (zsh package manager: https://antidote.sh/install)
-source /opt/homebrew/opt/antidote/share/antidote/antidote.zsh
+source "${HOMEBREW_PREFIX}/opt/antidote/share/antidote/antidote.zsh"
 
 # Configure antidote to load plugins from ./.zsh_plugins.txt and ~/.zsh_plugins.zsh
 zstyle ':antidote:bundle' file "$DOTFILES_DIR/.zsh_plugins.txt"
