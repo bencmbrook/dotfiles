@@ -43,7 +43,7 @@ alias gmail='cd ~/.gmailctl && code .'
 alias code='cursor'
 
 # Useful for developing this
-alias sz='source ~/.zshrc'
+alias sz="source ${ZDOTDIR:-$HOME}/.zshrc"
 
 # Add `pulumi` to the PATH (https://superuser.com/questions/284342/what-are-path-and-other-environment-variables-and-how-can-i-set-or-use-them)
 export PATH=$PATH:$HOME/.pulumi/bin
