@@ -2,13 +2,13 @@
 zmodload zsh/zprof
 
 # This repo's folder
-ZSHRC_FOLDER="$HOME/Code.noindex/zshrc"
+ZSHRC_DIR="${0:A:h}"
 
 # Antidote (zsh package manager: https://antidote.sh/install)
 source /opt/homebrew/opt/antidote/share/antidote/antidote.zsh
 
 # Configure antidote to load plugins from ./.zsh_plugins.txt and ~/.zsh_plugins.zsh
-zstyle ':antidote:bundle' file "$ZSHRC_FOLDER/.zsh_plugins.txt"
+zstyle ':antidote:bundle' file "$ZSHRC_DIR/.zsh_plugins.txt"
 zstyle ':antidote:static' file "${ZDOTDIR:-$HOME}/.zsh_plugins.zsh"
 
 # Load antidote plugins from .zsh_plugins.txt
@@ -34,8 +34,7 @@ mkcdir ()
 
 # Aliases
 alias codes='cd $HOME/Code.noindex'
-alias zshrc='cd $HOME/Code.noindex/zshrc'
-alias pgpt='cd $HOME/transcend/ai-chatbot'
+alias zshrc='cd $ZSHRC_DIR'
 alias site='cd $HOME/transcend/marketing-monorepo'
 alias docs='cd $HOME/transcend/docs'
 alias gmail='cd ~/.gmailctl && code .'
@@ -50,7 +49,7 @@ alias sz='source ~/.zshrc'
 export PATH=$PATH:$HOME/.pulumi/bin
 
 # Starship theme
-export STARSHIP_CONFIG="$ZSHRC_FOLDER/starship.toml"
+export STARSHIP_CONFIG="$ZSHRC_DIR/starship.toml"
 eval "$(starship init zsh)"
 
 # Autoload nvm
@@ -73,9 +72,6 @@ load-nvmrc() {
 add-zsh-hook chpwd load-nvmrc
 load-nvmrc
 
-# Update via `pnpm completion zsh >> .zshrc`
-
-#compdef pnpm
 ###-begin-pnpm-completion-###
 if type compdef &>/dev/null; then
   _pnpm_completion () {

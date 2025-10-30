@@ -5,19 +5,16 @@
 ### Requirements
 
 - zsh shell (comes stock on Mac)
-- Install homebrew first
-  - Install [starship.rs](https://starship.rs/) with homebrew
-  - Install [antidote](https://antidote.sh/install) with homebrew
+- homebrew
 
 ### `.zshrc`:
 
-Clone this repo into `~/Code.noindex` and change the content of `~/.zshrc` to point to this:
+Clone this repo into `~/Code.noindex` and run the install script:
 
 ```
-source ~/Code.noindex/zshrc/.zshrc
+git clone https://github.com/transcend-io/zshrc.git ~/Code.noindex/zshrc
+bash ~/Code.noindex/zshrc/install.sh
 ```
-
-_If using a different folder, change `ZSHRC_FOLDER` in [`.zshrc`](./.zshrc)._
 
 ### `starship.toml`
 
